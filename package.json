@@ -1,0 +1,49 @@
+{
+    "name": "mcp-jpexs",
+    "version": "0.1.0",
+    "description": "MCP server for decompiling Adobe Flash SWF files with JPEXS FFDec (ActionScript, images, shapes, sounds, fonts, etc.)",
+    "main": "dist/index.js",
+    "bin": {
+        "mcp-jpexs": "dist/index.js"
+    },
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "start": "node dist/index.js",
+        "watch": "tsc --watch",
+        "format": "prettier --write .",
+        "format:check": "prettier --check .",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix"
+    },
+    "keywords": [
+        "mcp",
+        "model-context-protocol",
+        "jpexs",
+        "ffdec",
+        "swf",
+        "decompiler",
+        "flash"
+    ],
+    "author": "Marcuth",
+    "license": "MIT",
+    "type": "commonjs",
+    "dependencies": {
+        "@marcuth/jpexs-decompiler": "^0.1.0",
+        "@modelcontextprotocol/sdk": "^1.32.1",
+        "zod": "^4.6.7"
+    },
+    "devDependencies": {
+        "@eslint/js": "^10.0.1",
+        "@ianvs/prettier-plugin-sort-imports": "^4.7.1",
+        "@types/node": "^26.6.5",
+        "@typescript/native": "npm:typescript@^7.0.2",
+        "eslint": "^10.13.0",
+        "eslint-plugin-unused-imports": "^4.4.1",
+        "prettier": "^3.9.10",
+        "typescript": "npm:@typescript/typescript6@^6.0.2",
+        "typescript-eslint": "^8.72.0"
+    }
+}
