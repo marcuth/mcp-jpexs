@@ -9,7 +9,11 @@ MCP (Model Context Protocol) server for decompiling Adobe Flash **SWF** files wi
 
 ## Installation
 
+Published on npm as [`mcp-jpexs`](https://www.npmjs.com/package/mcp-jpexs). No install needed for MCP clients — `npx` fetches it automatically (see below). For local development:
+
 ```bash
+git clone https://github.com/marcuth/mcp-jpexs.git
+cd mcp-jpexs
 npm install
 npm run build
 ```
@@ -17,6 +21,31 @@ npm run build
 ## Usage
 
 Register the server in your MCP client:
+
+```json
+{
+    "mcpServers": {
+        "jpexs": {
+            "command": "npx",
+            "args": ["-y", "mcp-jpexs"]
+        }
+    }
+}
+```
+
+Or, if you installed it globally (`npm install -g mcp-jpexs`):
+
+```json
+{
+    "mcpServers": {
+        "jpexs": {
+            "command": "mcp-jpexs"
+        }
+    }
+}
+```
+
+Running from a local clone also works:
 
 ```json
 {
